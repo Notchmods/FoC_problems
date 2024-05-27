@@ -1,0 +1,10 @@
+#Palindrome example
+""" Check if the number is palindrome.
+     By using string slicing, it compares
+     the original strng to backwards
+     version of the string"""
+def Palindrome(string):
+    if(string==string[::-1]):
+        return True
+    else:
+        return False
