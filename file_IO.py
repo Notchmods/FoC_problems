@@ -1,4 +1,4 @@
-"""Read files""""
+"""Read files, (same thing for CSV)""""
 def read_files("song.txt"):
         """r: read the file"""
     with open("song.txt","r") as songs:
