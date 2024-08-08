@@ -2,10 +2,11 @@ def fibonacci(n):
     """Add the previous number and the previous 2 number to form
     a new number"""
     #Backwards addition until it hits base case
-    """E.g. fibonacci(4)
-    4- 3+2=5
-    3-2+1=3
-    2-1+1=2
+    """E.g. fibonacci(5)
+    5-2+3=5
+    4- 1+2=3
+    3-1+1=2
+    2-1 (Since the previous number is 1)
     1-1
 
     1+1=2+1=3+2=5
