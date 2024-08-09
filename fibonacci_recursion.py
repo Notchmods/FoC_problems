@@ -17,3 +17,10 @@ def fibonacci(n):
         return 1
     
     return fibonacci(n-1)+fibonacci(n-2)
+
+
+#Factorial recursion
+def factorial(n):
+    if n==1:
+        return 1
+    return n*factorial(n-1)
