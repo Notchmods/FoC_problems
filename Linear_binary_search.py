@@ -14,24 +14,28 @@ def search(value,numbers):
    then comparing the middle point to the value to check if it is larger or smaller.
    Then reduce the list size by changing the end """
 #Binary search
-def B_search(value,numbers):
-    #Define start and end points
+array=[1,15,26,8,29,18,28,3]
+
+
+def Easier_binary_search(search,arrays):
+    #sort the list out
+    new_array=sorted(arrays)
+    #set starting and ending point
     start=0
-    end=(len(numbers)-1)
-    #The list hasn't been iterated through
-    while start<=end:
-        #Break the list into half
-        middle = start+(end-start)//2
-        """Check if the middle number is smaller or larger
-        than the desired value"""
-        if numbers[middle]<value:
-            #Increase the start size to the right of the middle list.
-            start= middle+1
-        elif numbers[middle]>value:
-            #If larger then decrease the end size to the left of middle list.
-             end=middle-1
-        else:
+    end=len(new_array)-1
+    middle=0
+
+    #If start and end is not the middle value
+    while(start<end):
+        #Always adjust middle value
+        middle=start+(end-start)//2
+        #If middle value is less than desired value shift right
+        if(new_array[middle]<search):
+            start=middle+1
+       #If middle value is more than desired value shift left
+        if(new_array[middle]>search):
+            end=middle-1
+        if(new_array[middle]==search):
+            print(new_array)
             return middle
-    #Return none when nothing is found
-    return None
     
